@@ -4,15 +4,15 @@
 如下是 less 模板规则的介绍，一些基本通用模板代码在同目录的 `common.less` 中
 
 - 目前项目开发一般使用 `less` 来快速开发
-[less 官网](http://lesscss.org/)
-[less github](https://github.com/less)
-[less 中文网](http://www.css88.com/doc/less/)
-[我自己整理的一些比较简单的 less 用法(供参考)](https://github.com/yhb-flydream/Use-Less)
+  - [less 官网](http://lesscss.org/)
+  - [less github](https://github.com/less)
+  - [less 中文网](http://www.css88.com/doc/less/)
+  - [我自己整理的一些比较简单的 less 用法(供参考)](https://github.com/yhb-flydream/Use-Less)
 
 - 一般会引入 `normalize` 来做一下样式初始化
-[normalize](http://necolas.github.io/normalize.css/)
-[normalize github](https://github.com/necolas/normalize.css)
-[了解更多 normalize](http://nicolasgallagher.com/about-normalize-css/)
+  - [normalize](http://necolas.github.io/normalize.css/)
+  - [normalize github](https://github.com/necolas/normalize.css)
+  - [了解更多 normalize](http://nicolasgallagher.com/about-normalize-css/)
 
 - 一个 `less` 文件如果有用到其他 `less` 文件*(比如：`index.less` 文件引用 `common.less(公共样式文件)`)*，则在文件开始部分
   - 用 `@import "common(common 的路径)"` 引入

@@ -53,13 +53,13 @@
 - `-main` 包括模块主体内容
 ##### 模块主体部分可以分为两种组合
 - 第一种：**上中下**结构
-	- `__hd`
-	- `__bd`
-	- `__ft`
+  - `__hd`
+  - `__bd`
+  - `__ft`
 - 第二种：**左中右**结构
-	- `__lt`
-	- `__ct`
-	- `__rt`
+  - `__lt`
+  - `__ct`
+  - `__rt`
 ```
 <!-- 第一种：**上中下**结构 -->
 <div class="xxx-yyy-wrap">
@@ -99,7 +99,7 @@
       <div class="yyy-item__hd"></div>
       <div class="yyy-item__bd"></div>
       <div class="yyy-item__ft"></div>
-	</div>
+  </div>
   </div>
 </div>
 ```
@@ -186,11 +186,11 @@
 ```
 
 - 内容部分 `xxx-content`
-	- 左侧内容 `article`
-		- 不一定用下面 `__item` 形式的结构，这种结构是为了在结构统一是使用的
-		- 可以根据每一部分不同的功能来定义不同的名字 `abc，def ...`
-	- 右侧内容 `aside`
-		- 同 `article`
+  - 左侧内容 `article`
+    - 不一定用下面 `__item` 形式的结构，这种结构是为了在结构统一是使用的
+    - 可以根据每一部分不同的功能来定义不同的名字 `abc，def ...`
+  - 右侧内容 `aside`
+    - 同 `article`
 ```
 <div class="xxx-content-wrap">
   <div class="xxx-content-main">
@@ -270,7 +270,7 @@
 ```
 <div class="xxx-banner-wrap">
   <div class="xxx-banner-main">
-	<!-- swiper 部分-->
+  <!-- swiper 部分-->
     <div class="swiper"></div>
   </div>
 </div>
