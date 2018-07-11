@@ -1,0 +1,440 @@
+@import "normalize";
+
+/* 基础公共颜色 */
+/* todo @color-default 为项目主题色，依据项目进行修改 */
+@color-default: #333;
+
+@color-658ccd: #658ccd;
+@color-ec1b24: #ec1b24;
+@color-08d665: #08d665;
+@color-f2d846: #f2d846;
+@color-fe6160: #fe6160;
+@color-7ecef4: #7ecef4;
+@color-b2c5e6: #b2c5e6;
+@color-5e89cc: #5e89cc;
+@color-000: #000;
+@color-333: #333;
+@color-666: #666;
+@color-999: #999;
+@color-ccc: #ccc;
+@color-ddd: #ddd;
+@color-eee: #eee;
+@color-fff: #fff;
+@color-fafa: #fafafa;
+@color-f2f2: #f2f2f2;
+@color-f7f7: #f7f7f7;
+@color-e8e8: #e8e8e8;
+@color-b2b2: #b2b2b2;
+
+/* todo 图片公用路径 */
+@img-url: '';
+
+/* 基础样式 */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  visibility: visible !important;
+  font-family:
+      "Microsoft YaHei",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Helvetica Neue",
+      Arial,
+      "PingFang SC",
+      "Hiragino Sans GB",
+      STHeiti,
+      "Microsoft JhengHei",
+      "Source Han Sans SC",
+      "Noto Sans CJK SC",
+      "Source Han Sans CN",
+      "Noto Sans SC",
+      "Source Han Sans TC",
+      "Noto Sans CJK TC",
+      "WenQuanYi Micro Hei",
+      SimSun,
+      sans-serif;
+
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+.en-ft {
+  font-family:
+      "Work Sans",
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+}
+
+ul, li, ol, dl {
+  list-style: none;
+}
+
+i , s{
+  font-style: normal;
+  font-weight: 400;
+}
+
+img, svg {
+  width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  color: @color-658ccd;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:hover {
+  text-decoration: none;
+  color: @color-658ccd;
+}
+
+a, button, input, select, textarea {
+  outline: 0;
+}
+
+h1 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h2,h3,h4,h5,h6 {
+  &:extend(h1);
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: '';
+    height: 0;
+    line-height: 0;
+    clear: both;
+    //visibility: hidden;
+    display: block;
+  }
+  zoom: 1;
+}
+
+.m0 {
+  margin: 0;
+}
+.p0 {
+  padding: 0;
+}
+
+/* 供后期进行样式微调(不建议在布局时直接使用来调整) */
+/* 包括 padding margin color background-color display float position */
+.getMarginPadding(@n, @i: 5) when (@i =< @n) {
+  .pl@{i} {
+    padding-left: @i * 1px;
+  }
+  .pr@{i} {
+    padding-right: @i * 1px;
+  }
+  .pt@{i} {
+    padding-top: @i * 1px;
+  }
+  .pb@{i} {
+    padding-bottom: @i * 1px;
+  }
+  .ml@{i} {
+    margin-left: @i * 1px;
+  }
+  .mr@{i} {
+    margin-right: @i * 1px;
+  }
+  .mt@{i} {
+    margin-top: @i * 1px;
+  }
+  .mb@{i} {
+    margin-bottom: @i * 1px;
+  }
+  .getMarginPadding(@n, (@i + 5));
+}
+.getMarginPadding(100);
+
+.color-fff {
+  color: @color-fff;
+}
+
+.color-ccc {
+  color: @color-ccc;
+}
+
+.color-000 {
+  color: @color-000;
+}
+
+.color-333 {
+  color: @color-333;
+}
+
+.color-666 {
+  color: @color-666;
+}
+
+.color-999 {
+  color: @color-999;
+}
+
+.color-658ccd {
+  color: @color-658ccd;
+}
+
+.bgc-fff {
+  background-color: @color-fff;
+}
+
+.bgc-f2f2 {
+  background-color: @color-f2f2;
+}
+
+.bgc-658ccd {
+  background-color: @color-658ccd;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.height-auto {
+  height: auto;
+}
+
+.float-l, .pull-left {
+  float: left;
+}
+
+.float-r, .pull-right {
+  float: right;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// 圆角
+.border-radius(@radius: 4px;) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// 过度
+.transition(@s: .3s;) {
+  -webkit-transition: all @s;
+  -moz-transition: all @s;
+  -ms-transition: all @s;
+  -o-transition: all @s;
+  transition: all @s;
+}
+
+// 位移
+.transform(@x: -50%, @y: -50%) {
+  -webkit-transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+
+// 背景图
+.bg-img(@width: 20px; @height: 20px; @url: '@{img-url}logo.png'; @vertical: middle; @bgc: #fff;) {
+  width: @width;
+  height: @height;
+  background: @bgc url(@url) no-repeat center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -ms-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  vertical-align: @vertical;
+}
+
+// icon-right 图标
+.icon-right (@width: 20px; @height: 20px; @url: '@{img-url}logo.png'; @vertical: middle;) {
+  &:after {
+    content: '';
+    display: inline-block;
+    .bg-img(@width: @width; @height: @height; @url: @url; @vertical: @vertical;);
+  }
+}
+
+// icon-left 图标
+.icon-left (@width: 20px; @height: 20px; @url: '@{img-url}logo.png'; @vertical: middle;) {
+  &:before {
+    content: '';
+    display: inline-block;
+    .bg-img(@width: @width; @height: @height; @url: @url; @vertical: @vertical;);
+  }
+}
+
+// 10px 字体
+.font-size10 {
+  font-size: 10px;
+  -webkit-transform: scale(.83);
+  -moz-transform: scale(.83);
+  -ms-transform: scale(.83);
+  -o-transform: scale(.83);
+  transform: scale(.83);
+  *font-size: 10px;
+}
+
+// 8px 字体
+.font-size8 {
+  font-size: 8px;
+  -webkit-transform: scale(.67);
+  -moz-transform: scale(.67);
+  -ms-transform: scale(.67);
+  -o-transform: scale(.67);
+  transform: scale(.67);
+  *font-size: 8px;
+}
+
+// 单行文本隐藏
+.one-line-text-hidden() {
+  //width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 多行文本隐藏
+// @line-num 行数
+// @height 最大高度(firefox 不支持省略号显示，所以用 max-height 限制高度隐藏)
+.multi-line-text-hidden(@line-num: 2; @height: 20px;) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line-num; // 显示多行，如果显示3行再溢出则改写成 -webkit-line-clamp:3;
+  max-height: @height;
+}
+
+
+// input、textarea placeholder 字体调整
+.placeholder(@color: @color-999; @size: .8rem;) {
+  &::-webkit-input-placeholder {
+    color: @color;
+    font-size: @size;
+  }
+  &:-moz-placeholder {
+    color: @color;
+    font-size: @size;
+  }
+  &::-moz-placeholder {
+    color: @color;
+    font-size: @size;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+    font-size: @size;
+  }
+}
+
+// 图片居中 position: absolute; 定位布局
+.img-center-pos(@height: 100%; @width: 100%;) {
+  height: @height;
+  width: @width;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+// 图片居中 display: flex; 布局
+.img-center-flex(@height: 100%; @width: 100%;) {
+  height: @height;
+  width: @width;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+
+.border(@color: @color-e8e8;) {
+  border-bottom: 1px solid @color;
+}
+
+.shadow {
+  box-shadow: 0 1px 10px rgba(0,0,0,.1);
+}
+
+// todo 修改 xxx 项目标记
+.xxx-content-wrap {
+
+}
+
+// todo 修改 xxx 项目标记
+.xxx-content-main {
+  width: 1220px; // todo 修改 项目宽度(项目宽度加需 20px ，然后用 padding 调整)
+  padding: 25px 10px;
+  margin: 0 auto;
+}
+
+/* 内容区域 可能结构不为左右分布 可以写在这里，可以根据不同页面布局单独写在每个文件里 */
+/*
+.article-wrap {
+  display: inline-block;
+  width: 850px;
+  float: left;
+}
+
+.aside-wrap {
+  display: inline-block;
+  width: 300px;
+  float: right;
+}
+*/
