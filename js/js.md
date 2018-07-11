@@ -1,0 +1,16 @@
+# js 基本模板规范
+[TOC]
+
+如果使用 `webpack-template` 基本模板来编译代码，建议使用 `ES6(ES7...)` 新语法来编写 `js` 代码
+
+使用的对应的页面的 `less` 文件在开头部分引入
+```
+require('');
+```
+
+依赖的外部插件也在开头部分引入
+```
+import { D3MakeSvgPicClass } from '../../../components/vendor/d3-rolesMap.js';
+```
+
+**js 没太多特别模板规范，语法规范按照 js 编码规范编写即可**

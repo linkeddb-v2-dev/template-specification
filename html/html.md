@@ -99,7 +99,7 @@
       <div class="yyy-item__hd"></div>
       <div class="yyy-item__bd"></div>
       <div class="yyy-item__ft"></div>
-  </div>
+    </div>
   </div>
 </div>
 ```
@@ -270,7 +270,7 @@
 ```
 <div class="xxx-banner-wrap">
   <div class="xxx-banner-main">
-  <!-- swiper 部分-->
+    <!-- swiper 部分-->
     <div class="swiper"></div>
   </div>
 </div>
