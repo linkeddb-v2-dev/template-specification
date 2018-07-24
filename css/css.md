@@ -1,7 +1,7 @@
 # less 基本模板规范
 [TOC]
 
-如下是 less 模板规则的介绍，一些基本通用模板代码在同目录的 `common.less` 中
+如下是 less 模板规则的介绍，一些基本通用模板代码在同目录的 [`common.less`](./common.less) 中
 
 - 目前项目开发一般使用 `less` 来快速开发
   - [less 官网](http://lesscss.org/)

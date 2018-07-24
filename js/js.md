@@ -10,7 +10,7 @@ require('');
 
 依赖的外部插件也在开头部分引入
 ```
-import { D3MakeSvgPicClass } from '../../../components/vendor/d3-rolesMap.js';
+import { xxx } from './xxx.js';
 ```
 
 **js 没太多特别模板规范，语法规范按照 js 编码规范编写即可**
